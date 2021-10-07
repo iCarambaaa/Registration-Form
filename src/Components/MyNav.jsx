@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 // import { propTypes } from "react-bootstrap/esm/Image";
+import { withRouter, Link } from "react-router-dom";
 
 const MyNav = (props) => (
   <Navbar
@@ -13,11 +14,17 @@ const MyNav = (props) => (
   >
     <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
     <Nav id="jumbotron" className="me-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">About</Nav.Link>
-      <Nav.Link href="#pricing">Browse</Nav.Link>
+      <Link className="nav-link" to="/">
+        Home
+      </Link>
+      <Link className="nav-link" to="/">
+        About
+      </Link>
+      <Link className="nav-link" to="/">
+        Registration
+      </Link>
     </Nav>
   </Navbar>
 );
 
-export default MyNav;
+export default withRouter(MyNav);
