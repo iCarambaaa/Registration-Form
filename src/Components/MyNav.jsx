@@ -20,7 +20,7 @@ const MyNav = (props) => (
       <Link className="nav-link" to="/">
         About
       </Link>
-      <Link className="nav-link" to="/">
+      <Link className="nav-link" to="/register">
         Registration
       </Link>
     </Nav>
